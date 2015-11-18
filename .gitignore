@@ -49,3 +49,11 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties.idea/*
 
+# 忽略target 目录
+target/
+
+#忽略log日志文件
+*.log
+
+
+
