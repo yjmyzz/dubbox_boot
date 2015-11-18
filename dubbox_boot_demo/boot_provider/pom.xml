@@ -42,6 +42,7 @@
             <artifactId>javaee-api</artifactId>
             <version>7.0</version>
         </dependency>
+        <!--org.jboss.resteasy   这写是dubbox　rest依赖的jar-->
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
             <artifactId>resteasy-jaxrs</artifactId>
@@ -74,6 +75,8 @@
             <artifactId>resteasy-jaxb-provider</artifactId>
             <version>3.0.7.Final</version>
         </dependency>
+        <!--end-->
+        <!--校验start-->
         <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
@@ -83,12 +86,7 @@
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
         </dependency>
-
-        <dependency>
-            <groupId>org.jboss.spec.javax.el</groupId>
-            <artifactId>jboss-el-api_3.0_spec</artifactId>
-            <version>1.0.0.Final</version>
-        </dependency>
+        <!--校验end-->
         <!-- zookeeper start -->
         <dependency>
             <groupId>org.apache.zookeeper</groupId>

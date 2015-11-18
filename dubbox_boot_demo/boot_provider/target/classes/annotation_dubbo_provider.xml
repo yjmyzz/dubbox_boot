@@ -10,7 +10,7 @@
     <!--半自动化，使用annotation来注解-->
     <dubbo:application name="provider_annotation" />
     <!-- 使用zookeeper广播注册中心暴露服务地址 -->
-    <dubbo:registry protocol="zookeeper" address="192.168.1.15:4180" />
+    <dubbo:registry protocol="zookeeper" address="192.168.1.15:4181" />
 
     <!-- 扫描注解包路径，多个包用逗号分隔，不填pacakge表示扫描当前ApplicationContext中所有的类 -->
     <dubbo:annotation package="space.isnow.boot_demo.service" />

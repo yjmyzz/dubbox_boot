@@ -8,6 +8,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
 /**
+ * 使用rest协议通信
  * Created by lxq on 15-11-17.
  */
 @Service

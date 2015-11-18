@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>dubbox_boot_demo</module>
+        <module>dubbox_boot_demo_end</module>
     </modules>
 
     <parent>
