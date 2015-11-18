@@ -9,10 +9,7 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>api</module>
-        <module>provider</module>
-        <module>provider_dubbo</module>
-        <module>consumer_dubbo</module>
+        <module>dubbox_boot_demo</module>
     </modules>
 
     <parent>
@@ -44,6 +41,19 @@
             <url>http://192.168.1.15:8081/nexus/content/groups/public</url>
         </pluginRepository>
     </pluginRepositories>
+
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <name>Nexus Release Repository</name>
+            <url>http://192.168.1.15:8081/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>Nexus Snapshot Repository</name>
+            <url>http://192.168.1.15:8081/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
 
 

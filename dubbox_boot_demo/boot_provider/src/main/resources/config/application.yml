@@ -1,0 +1,18 @@
+# application 配置文件
+
+# mysql配置文件
+#spring:
+#    mysql:
+#          url: jdbc:mysql://127.0.0.1:3306/test?autoReconnect=true&useCompression=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+#          username: root
+#          password: 123456
+#          driverClassNme: com.mysql.jdbc.Driver
+
+
+
+
+#配置日志级别
+# 使用自定义日志
+logging.config: config/logback.xml
+logging.file: log/demo_logging.log
+logging.level.org.springframework.web: DEBUG

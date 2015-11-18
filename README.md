@@ -41,6 +41,24 @@
 + 场景2：dubbo消费端调用dubbo的REST服务
 + 场景3：dubbo的消费端调用非dubbo的REST服务
 
+## 遇到的问题
+
+1. 我们大多数应用都是内部调用，所以在provider层提供rest接口的必要性这个需要考虑？
+2. provider层使用rest协议时，最好使用tomcat做内嵌的servlet容器
+
+```xml
+<dubbo:protocol name="rest" port="9090" server="tomcat" />
+```
+
+3. 每个接口使用Annotation声明时选择使用什么协议进行传输，同时在dubbo配置里可以声明每个protocol
+
+4. 多读dubbo和dubbox的文档，网上的文档都是入门的还不如自己看文档
+
+## 参考
+
++ [dubbo用户指南](http://dubbo.io/Developer+Guide-zh.htm)
++ [dubbox用户指南](http://dangdangdotcom.github.io/dubbox/rest.html)
+
 
 
 

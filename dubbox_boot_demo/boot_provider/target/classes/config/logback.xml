@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+spring boot的默认是logback
+    由于spring的一些基础类是采用logging写日志,因此如果要采用logback + slf4j做日志系统的话则在pom里添加slf4j的依赖
+    1, 在spring的spring-core的依赖里讲logging排除,eg:
+     <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    2, 在resource的根目录下创建logback.xml,  **注意**logback.xml只能在resource目录下,不能在其其他子目录下
+    3, 对spring项目来说,如果要使用logback进行日志记录则需要自己定义logback记录日志的格式
+       对spring-boot项目来说,可以选择继承boot的base.xml然后在application.yml里定义日志记录的level和filePath等
+
+
+-->
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/base.xml" />
+   <!-- &lt;!&ndash; 控制台输出日志 &ndash;&gt;
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder  class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder >
+    </appender>
+
+    &lt;!&ndash; 文件输出日志 (文件大小策略进行文件输出，超过指定大小对文件备份)&ndash;&gt;
+    <appender name="rollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>/log/log.log</File>
+        <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+            <FileNamePattern>log.log.%i.bak</FileNamePattern>
+            <MinIndex>1</MinIndex>
+            <MaxIndex>12</MaxIndex>
+        </rollingPolicy>
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <MaxFileSize>100MB</MaxFileSize>
+        </triggeringPolicy>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</Pattern>
+        </layout>
+    </appender>-->
+
+
+    <!-- project default level -->
+  <!--  <logger name="space.isnow.example.springBoot" level="DEBUG" />-->
+
+
+    <root level="INFO">
+        <appender-ref ref="console" />
+        <appender-ref ref="rollingFile" />
+    </root>
+
+    <!-- 下面配置一些第三方包的日志过滤级别，用于避免刷屏 -->
+    <!-- <logger name="org.springframework" level="WARN"/>
+     <logger name="org.apache" level="WARN"/>-->
+
+    <logger name="org" level="ERROR" />
+
+
+
+</configuration>
