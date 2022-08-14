@@ -46,7 +46,7 @@
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
             <artifactId>resteasy-jaxrs</artifactId>
-            <version>3.0.7.Final</version>
+            <version>3.0.11.Final</version>
             <exclusions>
                 <exclusion>
                     <artifactId>httpclient</artifactId>
